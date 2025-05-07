@@ -1,0 +1,30 @@
+# Manejo general de texto
+* text=auto eol=lf
+
+# Archivos específicos del código
+*.ts text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Archivos binarios o no textuales
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.svg binary
+
+# Ignorar advertencias de line endings innecesarias
+*.ts text=auto
+*.js text=auto
