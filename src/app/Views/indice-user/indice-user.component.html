@@ -1,1 +1,15 @@
-<p>indice-user works!</p>
+<h2>Users</h2>
+
+<button class="btn-register" mat-raised-button [routerLink]="">
+    <mat-icon>person_add</mat-icon> Registrar
+</button>
+
+<mat-card class="contenedor-tabla">
+    <app-generic-table
+        [data]="dataUsers"
+        [columns]="columnas"
+        (onEdit)="editarUsuario($event)"
+        (onDelete)="eliminarUsuario($event)">
+    </app-generic-table>
+</mat-card>
+
