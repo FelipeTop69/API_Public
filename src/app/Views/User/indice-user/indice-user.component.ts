@@ -68,5 +68,4 @@ export class IndiceUserComponent implements OnInit {
   editarUsuario(user: User): void {
     this.router.navigate([`/user/update/${user.id}`]);
   }
-
 }

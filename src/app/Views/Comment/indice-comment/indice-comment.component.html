@@ -1,0 +1,14 @@
+<h2>Comment</h2>
+
+<button class="btn-register" mat-raised-button routerLink="/comment/create">
+    <mat-icon>person_add</mat-icon> Registrar
+</button>
+
+<mat-card class="contenedor-tabla">
+    <app-generic-table
+        [data]="dataComments"
+        [columns]="columnas"
+        (onEdit)="editarComment($event)"
+        (onDelete)="eliminarComment($event)">
+    </app-generic-table>
+</mat-card>
