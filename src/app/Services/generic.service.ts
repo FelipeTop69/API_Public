@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export abstract class GenericService<T> {
 
+
   constructor(
     protected http: HttpClient,
     private baseUrl: string 
@@ -24,9 +25,15 @@ export abstract class GenericService<T> {
     return this.http.post<T>(this.baseUrl, item);
   }
 
+  // Objeto y Id
   update(id: number, item: T): Observable<T> {
     return this.http.put<T>(`${this.baseUrl}/${id}`, item);
   }
+
+  // Solo objeto
+  // update(item: T): Observable<T> {
+  //   return this.http.put<T>(`${this.baseUrl}`, item);
+  // }
 
   delete(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`);

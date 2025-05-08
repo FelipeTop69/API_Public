@@ -1,12 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { User } from '../../Models/user.model';
-import { UserService } from '../../Services/user.service';
 import { Router, RouterLink } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
-import { GenericTableComponent } from "../../General/generic-table/generic-table.component";
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import Swal from 'sweetalert2';
+import { GenericTableComponent } from '../../../General/generic-table/generic-table.component';
+import { User } from '../../../Models/user.model';
+import { UserService } from '../../../Services/user.service';
 
 
 @Component({
@@ -65,8 +65,8 @@ export class IndiceUserComponent implements OnInit {
     });
   }
 
-  editarUsuario(id: number): void {
-    this.router.navigate(['/users/editar', id]);
+  editarUsuario(user: User): void {
+    this.router.navigate([`/user/update/${user.id}`]);
   }
 
 }
