@@ -6,8 +6,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export abstract class GenericService<T> {
-
-
   constructor(
     protected http: HttpClient,
     private baseUrl: string 
@@ -38,5 +36,4 @@ export abstract class GenericService<T> {
   delete(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`);
   }
-
 }

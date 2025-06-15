@@ -35,7 +35,7 @@ export class IndiceAlbumComponent implements OnInit {
 
   cargarAlbums(): void {
     this.albumService.getAll().subscribe((res) => {
-      this.dataAlbums = res;
+      this.dataAlbums = res;  
     });
   }
 
